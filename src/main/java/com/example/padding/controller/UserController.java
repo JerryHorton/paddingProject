@@ -43,7 +43,6 @@ public class UserController {
         queryWrapper.eq(!StringUtils.isEmpty(name), User::getUsername, name);
         queryWrapper.orderByAsc(User::getId);
         userService.page(pageInfo);
-        int i;
         return R.success(pageInfo);
     }
 
