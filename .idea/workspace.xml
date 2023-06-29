@@ -75,17 +75,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PaddingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="paddingProject" />
       <extension name="coverage">
@@ -118,7 +107,7 @@
       <workItem from="1687931964403" duration="7597000" />
       <workItem from="1688003790013" duration="1652000" />
       <workItem from="1688018434654" duration="24000" />
-      <workItem from="1688019326703" duration="941000" />
+      <workItem from="1688019326703" duration="2000000" />
     </task>
     <task id="LOCAL-00001" summary="无">
       <created>1688019868492</created>
@@ -134,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688019926017</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="无">
+      <created>1688020438236</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1688020438236</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
