@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8d064c1-be20-4530-b636-c78ea84c1059" name="默认变更列表" comment="无">
+    <list default="true" id="d8d064c1-be20-4530-b636-c78ea84c1059" name="默认变更列表" comment="引入jwt完善登录">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/padding/common/JwtException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/padding/config/InterceptorConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/padding/interceptor/LoginInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/padding/utils/JwtUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/padding/common/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/padding/common/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/padding/config/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/padding/config/MybatisPlusConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/padding/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/padding/controller/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,11 +77,23 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/example/padding/entity" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.padding.filter" />
       <recent name="com.example.padding.common" />
       <recent name="com.example.padding.config" />
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PaddingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="paddingProject" />
       <extension name="coverage">
@@ -110,6 +129,7 @@
       <workItem from="1688019326703" duration="2000000" />
       <workItem from="1688023577492" duration="720000" />
       <workItem from="1688025636658" duration="419000" />
+      <workItem from="1688179965433" duration="13843000" />
     </task>
     <task id="LOCAL-00001" summary="无">
       <created>1688019868492</created>
@@ -146,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688025890413</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="引入jwt">
+      <created>1688180167840</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1688180167840</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +203,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="无" />
-    <option name="LAST_COMMIT_MESSAGE" value="无" />
+    <MESSAGE value="引入jwt" />
+    <MESSAGE value="引入jwt完善登录" />
+    <option name="LAST_COMMIT_MESSAGE" value="引入jwt完善登录" />
   </component>
 </project>

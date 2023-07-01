@@ -46,4 +46,15 @@ public class GlobalExceptionHandler {
         log.info(ex.getMessage());
         return R.error(ex.getMessage());
     }
+
+    /**
+     * jwt处理方法
+     *
+     * @return
+     */
+    @ExceptionHandler(JwtException.class)
+    public R<String> exceptionHandler(JwtException ex) {
+        log.info(ex.getMessage());
+        return R.error(ex.getMessage());
+    }
 }

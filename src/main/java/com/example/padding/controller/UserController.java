@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.padding.common.R;
 import com.example.padding.entity.User;
 import com.example.padding.service.UserService;
+import com.example.padding.utils.JwtUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.DigestUtils;
@@ -53,7 +54,7 @@ public class UserController {
      * @return
      */
     @PostMapping("/login")
-    public R<User> login(HttpServletRequest request, @RequestBody User user) {
+    public R<String> login(HttpServletRequest request, @RequestBody User user) {
         //将页面提交的密码password进行MD5加密处理,与数据库中加密密码比对
         String password = user.getPassword();
         password = DigestUtils.md5DigestAsHex(password.getBytes());
@@ -69,12 +70,16 @@ public class UserController {
             if (!password.equals(usr.getPassword())) {
                 return R.error("密码错误");
             }
-            //登录成功，将员工id存入Session并返回登录结果
-            request.getSession().setAttribute("user", usr.getId());
         }
+        //登录成功，将员工id存入Session并返回登录结果
+        //request.getSession().setAttribute("user", usr.getId());
+        String token = JwtUtils.createToken(user.getId(), user.getUsername(), 2 * 60 * 60);
+        //sesson中存入token
+        //request.getSession().setAttribute("token", token);
         log.info("用户{}登录成功", usr.getUsername());
+        log.info("token:{}", token);
         //登录成功返回用户信息，用于用户信息回显
-        return R.success(usr);
+        return R.success(token);
     }
 
     /**
