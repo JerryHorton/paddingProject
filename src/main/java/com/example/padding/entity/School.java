@@ -1,5 +1,7 @@
 package com.example.padding.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
 import java.util.Date;
@@ -14,7 +16,7 @@ import java.util.Date;
 @Data
 public class School {
     //学校id
-    private Integer id;
+    private Long id;
 
     //省份id
     private Integer provId;

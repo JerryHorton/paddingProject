@@ -4,6 +4,7 @@ import com.alibaba.druid.util.StringUtils;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.padding.common.R;
+import com.example.padding.entity.School;
 import com.example.padding.entity.User;
 import com.example.padding.service.UserService;
 import com.example.padding.utils.JwtUtils;
@@ -13,6 +14,8 @@ import org.springframework.util.DigestUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @version 1.0
@@ -54,7 +57,7 @@ public class UserController {
      * @return
      */
     @PostMapping("/login")
-    public R<String> login(HttpServletRequest request, @RequestBody User user) {
+    public R<Map> login(HttpServletRequest request, @RequestBody User user) {
         //将页面提交的密码password进行MD5加密处理,与数据库中加密密码比对
         String password = user.getPassword();
         password = DigestUtils.md5DigestAsHex(password.getBytes());
@@ -72,14 +75,17 @@ public class UserController {
             }
         }
         //登录成功，将员工id存入Session并返回登录结果
-        //request.getSession().setAttribute("user", usr.getId());
+        request.getSession().setAttribute("user", usr.getId());
         String token = JwtUtils.createToken(user.getId(), user.getUsername(), 2 * 60 * 60);
         //sesson中存入token
         //request.getSession().setAttribute("token", token);
         log.info("用户{}登录成功", usr.getUsername());
         log.info("token:{}", token);
         //登录成功返回用户信息，用于用户信息回显
-        return R.success(token);
+        Map<String, Object> map = new HashMap<>();
+        map.put("userInfo", usr);
+        map.put("token", token);
+        return R.success(map);
     }
 
     /**
@@ -110,5 +116,34 @@ public class UserController {
         //保存员工信息到数据库
         userService.save(user);
         return R.success("新增员工成功");
+    }
+
+    /**
+     * 根据id获取用户信息
+     *
+     * @param id
+     * @return
+     */
+    @GetMapping("/{id}")
+    public R<User> get(@PathVariable Long id) {
+        log.info("user:{}", id);
+        User user = userService.getById(id);
+        return R.success(user);
+    }
+
+    /**
+     * 修改用户信息
+     *
+     * @param user
+     * @return
+     */
+    @PutMapping
+    public R<String> update(@RequestBody User user) {
+        log.info("user:{}", user);
+        String password = user.getPassword();
+        String psd = DigestUtils.md5DigestAsHex(password.getBytes());
+        user.setPassword(psd);
+        userService.updateById(user);
+        return R.success("用户信息修改成功");
     }
 }

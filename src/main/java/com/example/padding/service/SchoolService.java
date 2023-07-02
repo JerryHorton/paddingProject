@@ -11,4 +11,5 @@ import com.example.padding.entity.School;
  */
 
 public interface SchoolService extends IService<School> {
+    void updateWith(School school);
 }

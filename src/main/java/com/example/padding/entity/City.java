@@ -1,5 +1,7 @@
 package com.example.padding.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
 /**
@@ -12,11 +14,11 @@ import lombok.Data;
 @Data
 public class City {
     //城市id
-    private Integer id;
+    private Long id;
 
     //城市名称
     private String name;
 
     //所属省份代码
-    private Integer pid;
+    private Long pid;
 }

@@ -4,7 +4,6 @@ import com.example.padding.interceptor.LoginInterceptor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -16,7 +15,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  */
 
 @Slf4j
-@EnableWebMvc   //WebMvcConfigurer 和 WebMvcConfigurationSupport同时实现只会生效一个，需要手动配置
 @Configuration
 public class InterceptorConfig implements WebMvcConfigurer {
 
@@ -25,7 +23,7 @@ public class InterceptorConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        log.info("配置拦截器");
+        log.info("配置jwt拦截器");
         registry.addInterceptor(loginInterceptor)
                 .addPathPatterns("/**")
                 .excludePathPatterns("/user/login", "/**/*.js", "/**/*.css");

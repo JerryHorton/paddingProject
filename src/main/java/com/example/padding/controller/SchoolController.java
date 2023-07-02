@@ -8,9 +8,7 @@ import com.example.padding.entity.School;
 import com.example.padding.service.SchoolService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @version 1.0
@@ -43,5 +41,43 @@ public class SchoolController {
         queryWrapper.orderByAsc(School::getId);
         schoolService.page(pageInfo);
         return R.success(pageInfo);
+    }
+
+    /**
+     * 新增学校信息
+     *
+     * @param school
+     * @return
+     */
+    @PostMapping
+    public R<String> save(@RequestBody School school) {
+        log.info("school:{}", school);
+        schoolService.save(school);
+        return R.success("学校信息添加成功");
+    }
+
+    /**
+     * 根据id获取学校信息
+     *
+     * @param id
+     * @return
+     */
+    @GetMapping("/{id}")
+    public R<School> get(@PathVariable Long id) {
+        log.info("schoolId:{}", id);
+        School school = schoolService.getById(id);
+        return R.success(school);
+    }
+
+    /**
+     * 修改学校信息，与学校关联信息可能也会受到影响，关联信息修改暂定
+     *
+     * @param school
+     * @return
+     */
+    @PutMapping
+    public R<String> update(@RequestBody School school) {
+        schoolService.updateWith(school);
+        return R.success("学校信息修改成功");
     }
 }

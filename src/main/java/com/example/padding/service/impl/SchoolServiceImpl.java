@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.padding.entity.School;
 import com.example.padding.mapper.SchoolMapper;
 import com.example.padding.service.SchoolService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,4 +16,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class SchoolServiceImpl extends ServiceImpl<SchoolMapper, School> implements SchoolService {
+    @Autowired
+    private SchoolService schoolService;
+
+    @Override
+    public void updateWith(School school) {
+        schoolService.updateById(school);
+    }
 }
