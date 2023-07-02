@@ -4,7 +4,6 @@ import com.alibaba.druid.util.StringUtils;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.padding.common.R;
-import com.example.padding.entity.School;
 import com.example.padding.entity.User;
 import com.example.padding.service.UserService;
 import com.example.padding.utils.JwtUtils;
