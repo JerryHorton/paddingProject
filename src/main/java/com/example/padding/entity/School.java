@@ -30,18 +30,6 @@ public class School {
     //地址
     private String address;
 
-    //学校类型
-    private Integer schoolType;
-
-    //校长
-    private String master;
-
-    //电话
-    private String telephone;
-
-    //评论
-    private String remark;
-
     //创建时间
     private Date createTime;
 }
