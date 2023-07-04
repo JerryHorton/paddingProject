@@ -1,9 +1,12 @@
 package com.example.padding.entity;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
@@ -19,10 +22,10 @@ public class School {
     private Long id;
 
     //省份id
-    private Integer provId;
+    private Long provId;
 
     //城市id
-    private Integer cityId;
+    private Long cityId;
 
     //学校名称
     private String name;
@@ -31,5 +34,6 @@ public class School {
     private String address;
 
     //创建时间
-    private Date createTime;
+    @TableField(fill = FieldFill.INSERT)
+    private LocalDateTime createTime;
 }

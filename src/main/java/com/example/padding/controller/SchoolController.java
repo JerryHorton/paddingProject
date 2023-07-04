@@ -10,6 +10,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * @version 1.0
  * @Date 2023/6/28 16:01
@@ -52,7 +54,7 @@ public class SchoolController {
     @PostMapping
     public R<String> save(@RequestBody School school) {
         log.info("school:{}", school);
-        schoolService.save(school);
+        schoolService.saveWithRedis(school);
         return R.success("学校信息添加成功");
     }
 
@@ -63,10 +65,23 @@ public class SchoolController {
      * @return
      */
     @GetMapping("/{id}")
-    public R<School> get(@PathVariable Long id) {
+    public R<School> getById(@PathVariable Long id) {
         log.info("schoolId:{}", id);
         School school = schoolService.getById(id);
         return R.success(school);
+    }
+
+    /**
+     * 获取相应城市的所有学校信息
+     *
+     * @param cid
+     * @return
+     */
+    @GetMapping("/{cid}")
+    public R<List<School>> getByCid(@PathVariable Long cid) {
+        log.info("cityId:{}", cid);
+        List<School> schools = schoolService.get(cid);
+        return R.success(schools);
     }
 
     /**

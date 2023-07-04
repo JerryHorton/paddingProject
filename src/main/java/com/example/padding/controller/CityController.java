@@ -31,11 +31,8 @@ public class CityController {
 
     @GetMapping("list/{pid}")
     public R<List<City>> list(@PathVariable Long pid) {
-        LambdaQueryWrapper<City> queryWrapper = new LambdaQueryWrapper<>();
-        //添加条件
-        queryWrapper.eq(City::getPid, pid);
-        List<City> cities = cityService.list(queryWrapper);
-        return R.success(cities);
+        List<City> list = cityService.list(pid);
+        return R.success(list);
     }
 
     /**

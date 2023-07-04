@@ -2,7 +2,7 @@ package com.example.padding.interceptor;
 
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.example.padding.common.JwtException;
-import com.example.padding.utils.JwtUtils;
+import com.example.padding.utils.JWTUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
@@ -35,7 +35,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         }
         // 解析jwt串
         try {
-            DecodedJWT decodedJWT = JwtUtils.verifyToken(token);
+            DecodedJWT decodedJWT = JWTUtils.verifyToken(token);
             request.setAttribute("userId", decodedJWT.getClaim("userId").asInt());
             request.setAttribute("username", decodedJWT.getClaim("username").asString());
         } catch (Exception e) {

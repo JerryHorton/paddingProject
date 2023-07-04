@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.padding.common.R;
 import com.example.padding.entity.User;
 import com.example.padding.service.UserService;
-import com.example.padding.utils.JwtUtils;
+import com.example.padding.utils.JWTUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.DigestUtils;
@@ -75,7 +75,7 @@ public class UserController {
         }
         //登录成功，将员工id存入Session并返回登录结果
         request.getSession().setAttribute("user", usr.getId());
-        String token = JwtUtils.createToken(user.getId(), user.getUsername(), 2 * 60 * 60);
+        String token = JWTUtils.createToken(user.getId(), user.getUsername(), 2 * 60 * 60);
         //sesson中存入token
         //request.getSession().setAttribute("token", token);
         log.info("用户{}登录成功", usr.getUsername());
@@ -144,5 +144,18 @@ public class UserController {
         user.setPassword(psd);
         userService.updateById(user);
         return R.success("用户信息修改成功");
+    }
+
+    /**
+     * 根据id删除用户信息
+     *
+     * @param id
+     * @return
+     */
+    @DeleteMapping
+    public R<String> delete(Long id) {
+        log.info("删除的用户id：{}", id);
+        userService.removeById(id);
+        return R.success("用户删除成功");
     }
 }

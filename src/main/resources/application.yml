@@ -10,6 +10,21 @@ spring:
       url: jdbc:mysql://localhost:3306/padding?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
       username: root
       password: 20010319Sxy
+  redis:
+    #url: redis://user:password@127.0.0.1:6379 #该地址配置以后会重置host,port,password的规则。
+    host: 127.0.0.1
+    port: 6379
+    #密码
+    database: 0 #指定数据库，默认为0
+    timeout: 300 #连接超时时间，单位毫秒，默认为0
+    ssl: false # 是否启用SSL连接，默认false
+    jedis:
+      pool: #连接池配置
+        max-active: 8 #最大活跃连接数，默认8个。
+        max-idle: 8 #最大空闲连接数，默认8个。
+        max-wait: -1 #获取连接的最大等待时间，默认-1，表示无限制，单位毫秒。默认值可能会因为获取不到连接，导致事务无法提交，数据库被锁，大量线程处于等待状态的情况。
+        min-idle: 0 #最小空闲连接数，默认0。
+
 mybatis-plus:
   configuration:
     #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射(address_book -> AddressBook)
@@ -19,5 +34,5 @@ mybatis-plus:
     db-config:
       id-type: ASSIGN_ID
 
-reggie:
-  path: /Users/Sxy/Desktop/homeProject/image/
+padding:
+  path: /Users/Sxy/Desktop/homeProject/

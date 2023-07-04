@@ -5,8 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8d064c1-be20-4530-b636-c78ea84c1059" name="默认变更列表" comment="无">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/padding/config/GlobalCorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/padding/config/JedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/padding/controller/CommonController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/padding/utils/FileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/padding/utils/JedisUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/padding/utils/JsonUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/padding/utils/POIUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/padding/CityControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/padding/JedisTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/padding/PaddingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/padding/PaddingApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/padding/controller/CityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/padding/controller/CityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/padding/controller/SchoolController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/padding/controller/SchoolController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/padding/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/padding/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/padding/entity/School.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/padding/entity/School.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/padding/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/padding/interceptor/LoginInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/padding/service/CityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/padding/service/CityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/padding/service/SchoolService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/padding/service/SchoolService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/padding/service/impl/CityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/padding/service/impl/CityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/padding/service/impl/SchoolServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/padding/service/impl/SchoolServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/padding/utils/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/padding/utils/JWTUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +86,9 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
@@ -71,12 +96,14 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/example/padding/entity" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.padding.controller" />
+      <recent name="com.example.padding.utils" />
       <recent name="com.example.padding.filter" />
       <recent name="com.example.padding.common" />
       <recent name="com.example.padding.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.PaddingApplication">
+  <component name="RunManager" selected="JUnit.SchoolControllerTest.testList2">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -90,7 +117,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserControllerTest.testSave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CityControllerTest.testList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="paddingProject" />
       <extension name="coverage">
         <pattern>
@@ -99,14 +126,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.padding" />
-      <option name="MAIN_CLASS_NAME" value="com.example.padding.UserControllerTest" />
-      <option name="METHOD_NAME" value="testSave" />
+      <option name="MAIN_CLASS_NAME" value="com.example.padding.CityControllerTest" />
+      <option name="METHOD_NAME" value="testList" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PaddingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="CityControllerTest.testList1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="paddingProject" />
       <extension name="coverage">
         <pattern>
@@ -114,17 +141,76 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.padding.PaddingApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+      <option name="PACKAGE_NAME" value="com.example.padding" />
+      <option name="MAIN_CLASS_NAME" value="com.example.padding.CityControllerTest" />
+      <option name="METHOD_NAME" value="testList1" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JedisTest.testDel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="paddingProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.padding.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.padding" />
+      <option name="MAIN_CLASS_NAME" value="com.example.padding.JedisTest" />
+      <option name="METHOD_NAME" value="testDel" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SchoolControllerTest.testList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="paddingProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.padding.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.padding" />
+      <option name="MAIN_CLASS_NAME" value="com.example.padding.SchoolControllerTest" />
+      <option name="METHOD_NAME" value="testList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SchoolControllerTest.testList2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="paddingProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.padding.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.padding" />
+      <option name="MAIN_CLASS_NAME" value="com.example.padding.SchoolControllerTest" />
+      <option name="METHOD_NAME" value="testList2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.CityControllerTest.testList" />
+      <item itemvalue="JUnit.CityControllerTest.testList1" />
+      <item itemvalue="JUnit.JedisTest.testDel" />
+      <item itemvalue="JUnit.SchoolControllerTest.testList" />
+      <item itemvalue="JUnit.SchoolControllerTest.testList2" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.PaddingApplication" />
-        <item itemvalue="JUnit.UserControllerTest.testSave" />
+        <item itemvalue="JUnit.SchoolControllerTest.testList2" />
+        <item itemvalue="JUnit.SchoolControllerTest.testList" />
+        <item itemvalue="JUnit.CityControllerTest.testList1" />
+        <item itemvalue="JUnit.CityControllerTest.testList" />
+        <item itemvalue="JUnit.JedisTest.testDel" />
       </list>
     </recent_temporary>
   </component>
@@ -143,7 +229,9 @@
       <workItem from="1688023577492" duration="720000" />
       <workItem from="1688025636658" duration="419000" />
       <workItem from="1688179965433" duration="13869000" />
-      <workItem from="1688259426811" duration="9412000" />
+      <workItem from="1688259426811" duration="21675000" />
+      <workItem from="1688345934205" duration="16480000" />
+      <workItem from="1688432825735" duration="10002000" />
     </task>
     <task id="LOCAL-00001" summary="无">
       <created>1688019868492</created>
@@ -201,7 +289,28 @@
       <option name="project" value="LOCAL" />
       <updated>1688268029190</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="无">
+      <created>1688268948790</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1688268948790</updated>
+    </task>
+    <task id="LOCAL-00010" summary="无">
+      <created>1688279679754</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1688279679754</updated>
+    </task>
+    <task id="LOCAL-00011" summary="无">
+      <created>1688280676883</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1688280676883</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,10 +339,21 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="无" />
     <MESSAGE value="引入jwt" />
     <MESSAGE value="引入jwt完善登录" />
     <MESSAGE value="完善登录，并解决WebMvcConfigurer 与 WebMvcConfigurationSupport同时使用产生的问题。&#10;新增了School，City的业务方法" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善登录，并解决WebMvcConfigurer 与 WebMvcConfigurationSupport同时使用产生的问题。&#10;新增了School，City的业务方法" />
+    <MESSAGE value="无" />
+    <option name="LAST_COMMIT_MESSAGE" value="无" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/padding/controller/CommonController.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
