@@ -44,7 +44,7 @@ public class SchoolServiceImpl extends ServiceImpl<SchoolMapper, School> impleme
         try {
             //school_cid作为key
             String key = "school_" + school.getCityId();
-            //删除redis原保存的数据
+            //删除redis原保存的数据，避免数据不一致
             jedis.del(key);
         } catch (Exception e) {
             e.printStackTrace();
