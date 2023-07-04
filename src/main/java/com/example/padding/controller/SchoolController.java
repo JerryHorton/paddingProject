@@ -59,19 +59,6 @@ public class SchoolController {
     }
 
     /**
-     * 根据id获取学校信息
-     *
-     * @param id
-     * @return
-     */
-    @GetMapping("/{id}")
-    public R<School> getById(@PathVariable Long id) {
-        log.info("schoolId:{}", id);
-        School school = schoolService.getById(id);
-        return R.success(school);
-    }
-
-    /**
      * 获取相应城市的所有学校信息
      *
      * @param cid
